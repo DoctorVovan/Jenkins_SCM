@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build app') {
              steps {
-                   echo 'build'
+                   dotnet build 'https://github.com/DoctorVovan/Jenkins_SCM/blob/master/Jenkins_SCM.sln'
              }
         }
         stage('Run app'){
