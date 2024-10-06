@@ -1,5 +1,5 @@
 pipeline {
-    agent ane
+    agent any
 
     stages {
         stage('Hello'){
@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Build app') {
              steps {
-                    dotnet build 'https://github.com/DoctorVovan/Jenkins_SCM/blob/master/Jenkins_SCM.sln'
+                   echo 'build'
              }
         }
         stage('Run app'){
             steps {
-                 dotnet run 'https://github.com/DoctorVovan/JenkinsHelloWorld/blob/main/bin/Debug/HelloWorldJenkinsTest.exe'
+                 echo 'run'
             }
         }
     }
